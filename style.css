@@ -2,6 +2,7 @@
 
 /* Remove Default Margin and paddings for all HTML elements */
 * {
+    color: var(--text);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +11,8 @@
 :root {
     --heading : #393A56;
     --text : #7E7F85; 
+    --category : #0b054dcc;
+    --button : rgb(14, 48, 112);
     --theme : #FD5353;
     --bg : #F7F8F9;
     --footerBg : #415161;
@@ -41,5 +44,25 @@ ul{
     gap: 50px;
 }
 .menu-items li a{
-    color: var(--bg);
+    color: var(--text);
+}
+.slider-container{
+    background-color: var(--category);
+    height: 500px;
+}
+.slider1{
+    display: flex;
+    padding: 25px 50px;
+    gap: 50px;
+}
+.slider1-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.slider1-description button{
+    background-color: var(--button);
+    width: 80px;
+    height: 30px;
 }
