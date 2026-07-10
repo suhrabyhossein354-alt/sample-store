@@ -14,3 +14,32 @@
     --bg : #F7F8F9;
     --footerBg : #415161;
 }
+a{
+    text-decoration: none;  
+}
+ul{
+    list-style: none;
+}
+
+
+
+
+.first-menu{
+    display: flex;
+    height: 25x;
+    background-color: #393A56;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-content{
+    display: flex;
+    gap: 50px;
+}
+.menu-items{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.menu-items li a{
+    color: var(--bg);
+}
