@@ -13,6 +13,8 @@
   --text: #7e7f85;
   --category: #0b054dcc;
   --button: rgb(14, 48, 112);
+  --border: rgb(183, 183, 183);
+  --shadow: rgb(86, 86, 86);
   --theme: #fd5353;
   --bg: #f7f8f9;
   --footerBg: #415161;
@@ -23,88 +25,102 @@ a {
 ul {
   list-style: none;
 }
+button {
+  cursor: pointer;
+  border: 1px var(--border) solid;
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--shadow);
+  filter: brightness(1.1);
+}
+button:active {
+  transform: translateY(1px);
+}
 
-.first-menu {
+.header {
   display: flex;
   background-color: #393a56;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
 }
-.menu-content {
+.navbar {
   display: flex;
   gap: 50px;
 }
-.menu-items {
+.navbar-items {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.menu-items li a {
+.navbar-items li a {
   color: var(--text);
 }
 
 .slider-container {
-  overflow:scroll ;
+  overflow: hidden;
   background-color: var(--category);
   height: 500px;
 }
 
-.slider1 {
+.slider {
   display: flex;
   padding: 25px 50px;
   gap: 50px;
 }
-.slider1-description {
+.slider-description {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
 }
-.slider1-description button {
+.slider-description button {
   background-color: var(--button);
   width: 80px;
   height: 30px;
 }
 
-.slider2 {
-  display: flex;
-  padding: 25px 50px;
-  gap: 50px;
-}
-.slider2-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-.slider2-description button {
-  background-color: var(--button);
-  width: 80px;
-  height: 30px;
+.show-slide-number {
+  top: 90px;
+  position: absolute;
+  font-size: 18px;
 }
 
-.slider3 {
-  display: flex;
-  padding: 25px 50px;
-  gap: 50px;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  font-size: 25px;
+  transition: 0.5s ease;
+  user-select: none;
+  margin: 0px 8px;
 }
-.slider3-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+.next {
+  right: 0;
 }
-.slider3-description button {
-  background-color: var(--button);
-  width: 80px;
-  height: 30px;
+.next:hover {
+  transform: translateX(5px);
+  box-shadow: 0px 8px 30px var(--shadow);
+  filter: brightness(1.1);
+}
+.prev:hover {
+  transform: translateX(-5px);
+  box-shadow: 0px 8px 30px var(--shadow);
+  filter: brightness(1.1);
 }
 
-.show-slide-dot{
+.show-slide-dot {
   text-align: center;
-
 }
-.show-slide-dot span{
+.show-slide-dot span {
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -112,5 +128,5 @@ ul {
   display: inline-block;
   border-radius: 9999px;
   margin: 4px 2px;
-  transition: background-color .5s ease;
+  transition: background-color 0.5s ease;
 }
