@@ -2,67 +2,115 @@
 
 /* Remove Default Margin and paddings for all HTML elements */
 * {
-    color: var(--text);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /* CSS variables to use any where in website (if you want to change theme one change here will apply to entire website) */
 :root {
-    --heading : #393A56;
-    --text : #7E7F85; 
-    --category : #0b054dcc;
-    --button : rgb(14, 48, 112);
-    --theme : #FD5353;
-    --bg : #F7F8F9;
-    --footerBg : #415161;
+  --heading: #393a56;
+  --text: #7e7f85;
+  --category: #0b054dcc;
+  --button: rgb(14, 48, 112);
+  --theme: #fd5353;
+  --bg: #f7f8f9;
+  --footerBg: #415161;
 }
-a{
-    text-decoration: none;  
+a {
+  text-decoration: none;
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
+.first-menu {
+  display: flex;
+  background-color: #393a56;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-content {
+  display: flex;
+  gap: 50px;
+}
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.menu-items li a {
+  color: var(--text);
+}
 
+.slider-container {
+  overflow:scroll ;
+  background-color: var(--category);
+  height: 500px;
+}
 
+.slider1 {
+  display: flex;
+  padding: 25px 50px;
+  gap: 50px;
+}
+.slider1-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.slider1-description button {
+  background-color: var(--button);
+  width: 80px;
+  height: 30px;
+}
 
-.first-menu{
-    display: flex;
-    height: 25x;
-    background-color: #393A56;
-    justify-content: space-between;
-    align-items: center;
+.slider2 {
+  display: flex;
+  padding: 25px 50px;
+  gap: 50px;
 }
-.menu-content{
-    display: flex;
-    gap: 50px;
+.slider2-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
-.menu-items{
-    display: flex;
-    align-items: center;
-    gap: 50px;
+.slider2-description button {
+  background-color: var(--button);
+  width: 80px;
+  height: 30px;
 }
-.menu-items li a{
-    color: var(--text);
+
+.slider3 {
+  display: flex;
+  padding: 25px 50px;
+  gap: 50px;
 }
-.slider-container{
-    background-color: var(--category);
-    height: 500px;
+.slider3-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
-.slider1{
-    display: flex;
-    padding: 25px 50px;
-    gap: 50px;
+.slider3-description button {
+  background-color: var(--button);
+  width: 80px;
+  height: 30px;
 }
-.slider1-description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+
+.show-slide-dot{
+  text-align: center;
+
 }
-.slider1-description button{
-    background-color: var(--button);
-    width: 80px;
-    height: 30px;
+.show-slide-dot span{
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: #7e7f85;
+  display: inline-block;
+  border-radius: 9999px;
+  margin: 4px 2px;
+  transition: background-color .5s ease;
 }
