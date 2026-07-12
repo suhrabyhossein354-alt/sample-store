@@ -9,12 +9,13 @@
 }
 /* CSS variables to use any where in website (if you want to change theme one change here will apply to entire website) */
 :root {
-  --heading: #393a56;
+  --heading: rgb(3, 2, 31);
+  --navbar : #051430;
   --text: #7e7f85;
   --category: #0b054dcc;
   --button: rgb(14, 48, 112);
   --border: rgb(183, 183, 183);
-  --shadow: rgb(86, 86, 86);
+  --shadow: rgb(52, 52, 52);
   --theme: #fd5353;
   --bg: #f7f8f9;
   --footerBg: #415161;
@@ -45,24 +46,110 @@ button:active {
 
 .header {
   display: flex;
-  background-color: #393a56;
+  background-color: var(--heading);
   justify-content: space-between;
   align-items: center;
   height: 80px;
 }
+.logo{
+  cursor: pointer;
+}
+.logo:hover{
+  filter: brightness(1.4);
+}
+.cart{
+  cursor: pointer;
+}
+.cart:hover{
+  filter: brightness(1.4);
+}
+.search-box{
+  position: absolute;
+  display: flex;
+  left: 350px;
+}
+.search-box input{
+  width: 500px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: large;
+  padding-left: 10px;
+  color: var(--text);
+  background-color: var(--bg);
+}
+.search-box button{
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 32px;
+  background-color: var(--button);
+  border-left: none;
+  border: gray;
+  border-radius: 8px;
+}
+.social-media-header{
+  display: flex;
+  position: absolute;
+  left: 200px;
+  padding: 10px;
+}
+.telegram-header img{
+  width: 50px;
+  height: auto;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.youtube-header img{
+  width: 50px;
+  height: auto;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.youtube-header img:hover, .telegram-header img:hover{
+  transform: scale(1.2);
+}
+.youtube-header img:active, .telegram-header img:active{
+  transform: scale(1);
+}
 .navbar {
   display: flex;
   gap: 50px;
+  background-color: var(--navbar);
 }
 .navbar-items {
   display: flex;
   align-items: center;
   gap: 50px;
+  margin-left: 10px;
 }
 .navbar-items li a {
   color: var(--text);
+  cursor: pointer;
+  border-radius: 20px;
+  transition:.3s ease;
+  display: inline-block;
+  position: relative;
 }
-
+.navbar-items li a:hover {
+  filter: brightness(1.1);
+  box-shadow: 2px 4px 20px var(--shadow);
+  color:#00c8ff;
+  transform:translateY(-2px);
+}
+.navbar-items li a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom: 0;
+  width:0;
+  height:2px;
+  background:#00c8ff;
+  transition:.3s;
+}
+.navbar-items li a:hover::after{
+  width: 100%;
+  left: 0;
+}
 .slider-container {
   overflow: hidden;
   background-color: var(--category);
@@ -87,7 +174,7 @@ button:active {
 }
 
 .show-slide-number {
-  top: 90px;
+  top: 100px;
   position: absolute;
   font-size: 18px;
 }
