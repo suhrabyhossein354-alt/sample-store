@@ -150,16 +150,23 @@ button:active {
   width: 100%;
   left: 0;
 }
+
 .slider-container {
   overflow: hidden;
+  position: relative;
   background-color: var(--category);
   height: 500px;
 }
-
+.slider-track{
+  display: flex;
+  transition: transform .8s ease;
+}
 .slider {
   display: flex;
+  position: relative;
   padding: 25px 50px;
   gap: 50px;
+  min-width: 100%;
 }
 .slider-description {
   display: flex;
@@ -174,7 +181,7 @@ button:active {
 }
 
 .show-slide-number {
-  top: 100px;
+  top: 0;
   position: absolute;
   font-size: 18px;
 }

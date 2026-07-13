@@ -56,49 +56,53 @@
     
         <div class="slider-container">
 
-            <div class="slider">
+            <div class="slider-track">
 
-                <div class="show-slide-number">1 / 3</div>
-                <img src="./img/fashion-1.png" alt="fashion-img">
-                <div class="slider-description">
-                    <h1>title</h1>
-                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ut cum laborum esse voluptatum provident maiores nihil, quo, omnis excepturi odio tempora error reprehenderit aliquid sapiente a numquam quas animi illo, blanditiis consequuntur? Magnam nam maiores corporis expedita nobis iste odio sit accusamus aperiam, nostrum vitae perferendis ratione ad architecto.</h3>
-                    <button>more</button>
+                <div class="slider">
+
+                    <div class="show-slide-number">1 / 3</div>
+                    <img src="./img/fashion-1.png" alt="fashion-img">
+                    <div class="slider-description">
+                        <h1>title</h1>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ut cum laborum esse voluptatum provident maiores nihil, quo, omnis excepturi odio tempora error reprehenderit aliquid sapiente a numquam quas animi illo, blanditiis consequuntur? Magnam nam maiores corporis expedita nobis iste odio sit accusamus aperiam, nostrum vitae perferendis ratione ad architecto.</h3>
+                        <button>more</button>
+                    </div>
+
                 </div>
+                <div class="slider">
 
-            </div>
-            <div class="slider">
+                    <div class="show-slide-number">2 / 3</div>
+                    <img src="./img/fashion-2.png" alt="fashion-img">
+                    <div class="slider-description">
+                        <h1>title</h1>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ut cum laborum esse voluptatum provident maiores nihil, quo, omnis excepturi odio tempora error reprehenderit aliquid sapiente a numquam quas animi illo, blanditiis consequuntur? Magnam nam maiores corporis expedita nobis iste odio sit accusamus aperiam, nostrum vitae perferendis ratione ad architecto.</h3>
+                        <button>more</button>
+                    </div>
 
-                <div class="show-slide-number">2 / 3</div>
-                <img src="./img/fashion-2.png" alt="fashion-img">
-                <div class="slider-description">
-                    <h1>title</h1>
-                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ut cum laborum esse voluptatum provident maiores nihil, quo, omnis excepturi odio tempora error reprehenderit aliquid sapiente a numquam quas animi illo, blanditiis consequuntur? Magnam nam maiores corporis expedita nobis iste odio sit accusamus aperiam, nostrum vitae perferendis ratione ad architecto.</h3>
-                    <button>more</button>
                 </div>
+                <div class="slider">
 
-            </div>
-            <div class="slider">
+                    <div class="show-slide-number">3 / 3</div>
+                    <img src="./img/fashion-3.png" alt="fashion-img">
+                    <div class="slider-description">
+                        <h1>title</h1>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ut cum laborum esse voluptatum provident maiores nihil, quo, omnis excepturi odio tempora error reprehenderit aliquid sapiente a numquam quas animi illo, blanditiis consequuntur? Magnam nam maiores corporis expedita nobis iste odio sit accusamus aperiam, nostrum vitae perferendis ratione ad architecto.</h3>
+                        <button>more</button>
+                    </div>
 
-                <div class="show-slide-number">3 / 3</div>
-                <img src="./img/fashion-3.png" alt="fashion-img">
-                <div class="slider-description">
-                    <h1>title</h1>
-                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ut cum laborum esse voluptatum provident maiores nihil, quo, omnis excepturi odio tempora error reprehenderit aliquid sapiente a numquam quas animi illo, blanditiis consequuntur? Magnam nam maiores corporis expedita nobis iste odio sit accusamus aperiam, nostrum vitae perferendis ratione ad architecto.</h3>
-                    <button>more</button>
                 </div>
+            
+            </div>    
 
-            </div>
+            <a onclick="prevSlide(-1)" class="prev">&#10094</a>
 
-            <a onclick="plusSlides(-1)" class="prev">&#10094</a>
-
-            <a onclick="plusSlides(1)" class="next">&#10095</a>
+            <a onclick="nextSlide(1)" class="next">&#10095</a>
            
         </div>
          <div class="show-slide-dot">
-                <span onclick="currentslide(1)"></span>
-                <span onclick="currentslide(2)"></span>
-                <span onclick="currentslide(3)"></span>
+                <span onclick="goToSlide(0)"></span>
+                <span onclick="goToSlide(1)"></span>
+                <span onclick="goToSlide(2)"></span>
         </div>
 
     <!-- ===== Featured Products ======= -->
@@ -117,5 +121,7 @@
     <script>
        
     </script>
+
+    <script src="./script.js"></script>
 </body>
 </html>
